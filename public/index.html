@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<link rel="stylesheet" href='/css/style.css'>
+
+<video id="homevideo" width="100%" autoplay onended="run()">
+    <source src="vid/mm0.mp4" type='video/mp4'/>
+</video>
+
+<div id="polina">
+<h1>Chris Dow</h1>
+<p>Generative Work</p>
+
+<button onclick="myFunction0()">Gallery</button>
+<p id="demo0"></p> 
+
+
+<form method="post" action="/">
+  <button>Gallery</button>
+</form>
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+<p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+
+
+<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
+<button onclick="myFunction()">Click me</button>
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+//var app = require('/public/app.js');
+
+video_count = 0;
+videoPlayer = document.getElementById("homevideo");
+
+
+function run(){
+        video_count++;
+        if (video_count == 4) video_count = 0;
+        var nextVideo = "vid/mm"+video_count+".mp4";
+        videoPlayer.src = nextVideo;
+        videoPlayer.play();
+   };
+
+
+function myFunction() {
+    //console.log( "skip video"));
+    //console.log(path.join(__dirname, "public/views"));
+        document.getElementById("demo").innerHTML = "Hello World";
+           video_count++;
+        if (video_count == 4) video_count = 0;
+        var nextVideo = "vid/mm"+video_count+".mp4";
+        videoPlayer.src = nextVideo;
+        videoPlayer.play();
+}
+
+function myFunction0() {
+document.getElementById("demo0").innerHTML = path.join(__dirname, "/views");
+         video_count++;
+        if (video_count == 4) video_count = 0;
+        var nextVideo = "vid/mm"+video_count+".mp4";
+        videoPlayer.src = nextVideo;
+        videoPlayer.play();
+}
+
+
+
+</script>
+
+</body>
+</html>

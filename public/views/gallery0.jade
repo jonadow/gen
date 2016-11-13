@@ -1,0 +1,28 @@
+﻿doctype html
+html
+  head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    title Christopher Dow
+    style.
+      p.small {
+      line-height: 0.5;
+      }
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-81125496-1', 'auto');
+      ga('send', 'pageview');
+  body(bgcolor='#222222')
+    p.small(style='color:white')   
+    li
+     a(href='/') Home
+    // START SIMPLEVIEWER EMBED
+    script(type='text/javascript', src='svcore/js/simpleviewer.js')
+    script(type='text/javascript').
+      simpleviewer.ready(function () {
+      simpleviewer.load('sv-container', '100%', '100%', '222222', true);
+      });
+    #sv-container
+    // END SIMPLEVIEWER EMBED
