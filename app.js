@@ -3,6 +3,9 @@ var app  = express();
 var path = require('path');
 var bodyParser = require("body-parser");
 
+
+app.set('port', (process.env.PORT || 5000));
+
 //app.use(express.bodyParser);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -41,25 +44,12 @@ console.log(path.join(__dirname, '/public/views/gallery0'));
 
 
 
-//app.get('/', function (req, res) {
-//  console.log(path.join(__dirname, '/public/views/gallery1'));
-//  res.render(path.join(__dirname, '/public/views/gallery0'), { title: 'Hey', message: 'Hello there!' });
-//});
 
-//var router = express.Router();
-//app.use(router);
-// route middleware that will happen on every request
-//router.use(function(req, res, next) {
-
-	// log each request to the console
-//	console.log(req.method, req.url);
-
-	// continue doing what we were doing and go to the route
-//	next();	
-//});
-
-
-
-app.listen(8888);
-
+//app.listen(8888);
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
+});
 
