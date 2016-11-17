@@ -2,15 +2,16 @@ var express = require('express');
 var app  = express();
 var path = require('path');
 var bodyParser = require("body-parser");
-
+//var port =parseInt(process.env.PORT, 10) || 3000;
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //app.set('port', process.env.PORT || 3000);
+
 app.set('view engine', 'jade');
-app.set('views', __dirname + '/public/views');
-app.set('css', __dirname + '/public/css');
+//app.set('views', __dirname + '/public/views');
+//app.set('css', __dirname + '/public/css');
 app.use(express.static(__dirname + '/public/'));
 
 //var router = express.Router();
@@ -41,13 +42,13 @@ res.sendFile('index.html', { root: path.join(__dirname, '/public/') });
 
 console.log(path.join(__dirname, '/public/views/gallery0'));
 
-
+//app.listen(port)
 //app.listen(8888);
 //app.get('/', function(request, response) {
 //    var result = 'App is running'
 //    response.send(result);
 //})
 app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+ console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
