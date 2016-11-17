@@ -4,9 +4,7 @@ var path = require('path');
 var bodyParser = require("body-parser");
 
 
-app.set('port', (process.env.PORT || 5000));
 
-//app.use(express.bodyParser);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('port', process.env.PORT || 3000);
@@ -14,9 +12,11 @@ app.set('view engine', 'jade');
 app.set('views', __dirname + '/public/views');
 app.set('css', __dirname + '/public/css');
 app.use(express.static(__dirname + '/public/'));
+
 var router = express.Router();
 app.use(router);
-// route middleware that will happen on every request
+
+
 router.use(function(req, res, next) {
 
 	// log each request to the console
@@ -29,7 +29,6 @@ router.use(function(req, res, next) {
 console.log(path.join(__dirname, '/public/views/'));
 console.log("top");
 
-app.use(bodyParser());
 app.post('/', function(req, res) {
   console.log(req.body);
   res.render(path.join(__dirname, '/public/views/gallery0'));  
@@ -41,8 +40,6 @@ res.sendFile('index.html', { root: path.join(__dirname, '/public/') });
 
 
 console.log(path.join(__dirname, '/public/views/gallery0'));
-
-
 
 
 //app.listen(8888);
