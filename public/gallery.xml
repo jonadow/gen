@@ -261,9 +261,9 @@
 	linkTarget="_blank">
     <caption><![CDATA[mesh 3, 60x 26 inches]]></caption>
   </image>
-  <image imageURL="images/zs-890000001.jpg"
-	thumbURL="thumbs/zs-890000001.jpg"
-	linkURL="images/zs-890000001.jpg"
+  <image imageURL="views/images/zs-890000001.jpg"
+	thumbURL="views/thumbs/zs-890000001.jpg"
+	linkURL="views/images/zs-890000001.jpg"
 	linkTarget="_blank">
     <caption><![CDATA[mesh 4, 60x 26 inches]]></caption>
   </image>
