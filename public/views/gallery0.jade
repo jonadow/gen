@@ -22,9 +22,11 @@ html
     script(type='text/javascript', src='/views/svcore/js/simpleviewer.js')
     script(type='text/javascript').
 
-     var flashvars = {};
-     flashvars.galleryURL = "/views/gallery.xml";
+      //var flashvars = {};
+      //flashvars.baseURL = "/views/";
+      //console.log(__dirname);
 
+      //simpleviewer.log(__dirname);  
       simpleviewer.ready(function () {
       simpleviewer.load('sv-container', '100%', '100%', '222222', true);
       });
