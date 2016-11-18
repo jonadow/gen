@@ -27,28 +27,28 @@ video {
   font-weight:100; 
   background: rgba(0,0,0,0.3);
   color: white;
-  padding: 2rem;
+  padding: 1.2rem;
   width: 33%;
-  margin:2rem;
+  margin:1.2rem;
   float: right;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   margin-top: 0;
   letter-spacing: .2rem;
 }
 #polina button { 
-  display: block;
-  width: 40%;
+  display: inline-block;
+  width: 15%;
   padding: .4rem;
   border: none; 
   margin: 1rem auto; 
-  font-size: 1.0rem;
+  font-size: 0.8rem;
   background: rgba(255,255,255,0.33);
   color: #fff;
-  border-radius: 3px; 
+  border-radius: 2px; 
   cursor: pointer;
   -webkit-transition: .3s background;
   transition: .3s background;
