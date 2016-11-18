@@ -38,6 +38,9 @@
 video_count = 0;
 videoPlayer = document.getElementById("homevideo");
 
+var testEl = document.createElement( "video" ),
+    mpeg4, h264, ogg, webm;
+
 function run(){
         video_count++;
         if (video_count == 4) video_count = 0;
