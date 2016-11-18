@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.set('view engine', 'jade');
 //app.set('views', __dirname + '/public/views');
 //app.set('css', __dirname + '/public/css');
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/public/views/'));
 
 var router = express.Router();
 app.use(router);
