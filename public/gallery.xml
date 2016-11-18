@@ -15,9 +15,9 @@
 	indexPageName="index4.html"
 
 >
-  <image imageURL="images/big0.jpg"
-	thumbURL="thumbs/big0.jpg"
-	linkURL="images/big0.jpg"
+  <image imageURL="views/images/big0.jpg"
+	thumbURL="views/thumbs/big0.jpg"
+	linkURL="views/images/big0.jpg"
 	linkTarget="_blank">
     <caption><![CDATA[rebar 1, 60x25 inches.]]></caption>
   </image>
