@@ -25,6 +25,7 @@ router.use(function(req, res, next) {
 	next();	
 });
 
+
 console.log(path.join(__dirname, '/public/views/'));
 console.log("top");
 

@@ -38,8 +38,7 @@
 video_count = 0;
 videoPlayer = document.getElementById("homevideo");
 
-var testEl = document.createElement( "video" ),
-    mpeg4, h264, ogg, webm;
+
 
 function run(){
         video_count++;
@@ -52,8 +51,29 @@ function run(){
 
 function myFunction() {
         
-        video_count++;
-        if (video_count == 4) video_count = 0;
+    video_count++;
+    if (video_count == 4) video_count = 0;
+    
+    //var testEl = document.createElement( "video" ),
+    // mpeg4, h264, ogg, webm;
+    //if ( testEl.canPlayType ) {
+    // Check for MPEG-4 support
+    //mpeg4 = "" !== testEl.canPlayType( 'video/mp4; codecs="mp4v.20.8"' );
+    //alert(mpeg4);
+    // Check for h264 support
+    //h264 = "" !== ( testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E"' )
+     //   || testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ) );
+     //console.log(h264); 
+     //alert(h264);
+    // Check for Ogg support
+   // ogg = "" !== testEl.canPlayType( 'video/ogg; codecs="theora"' );
+    //alert(ogg);
+    // Check for Webm support
+    //webm = "" !== testEl.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
+    //alert(webm);
+    //}
+
+
         var nextVideo = "vid/mm"+video_count+".mp4";
         videoPlayer.src = nextVideo;
         videoPlayer.play();
