@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+0<!DOCTYPE html>
 <html>
 <body>
 
@@ -6,9 +6,7 @@
 <link rel="stylesheet" href='/css/style.css'>
 
 <video id="homevideo" width="100%" autoplay onended="run()">
-    <source src="vid/mm0.mp4" type='video/mp4'>
-    <source src="vid/mm0.ogg" type="video/ogg">
-     
+    <source src="vid/mm0.mp4" type='video/mp4'/>
 </video>
 
 <div id="polina">
@@ -34,7 +32,7 @@
 <form method="post" action="/">
   <button>Gallery</button>
 </form>
-<button onclick="myFunction()">Cycle</button>
+<button onclick="myFunction()">cycle</button>
 <p id="demo"></p>
 
 <script type="text/javascript">
@@ -44,26 +42,9 @@ videoPlayer = document.getElementById("homevideo");
 
 
 function run(){
-    video_count++;
-    if (video_count == 4) video_count = 0;
-
-    var testEl = document.createElement( "video" ),
-      mpeg4, h264, ogg, webm;
-
-    if ( testEl.canPlayType ) {
-    mpeg4 = "" !== testEl.canPlayType( 'video/mp4; codecs="mp4v.20.8"' );
-    h264 = "" !== ( testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E"' )
-        || testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ) );
-    ogg = "" !== testEl.canPlayType( 'video/ogg; codecs="theora"' );
-    webm = "" !== testEl.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
-    
-    }
-    var nextVideo = "vid/mm"+video_count+".mp4";
-    if(mpeg4 == true) nextVideo = "vid/mm"+video_count+".mp4";
-    if(h264 == true) nextVideo = "vid/mm"+video_count+".mp4";
-    if(ogg == true) nextVideo = "vid/mm"+video_count+".ogg";
-
-//        var nextVideo = "vid/mm"+video_count+".mp4";
+        video_count++;
+        if (video_count == 4) video_count = 0;
+        var nextVideo = "vid/mm"+video_count+".mp4";
         videoPlayer.src = nextVideo;
         videoPlayer.play();
    };
@@ -74,21 +55,20 @@ function myFunction() {
     video_count++;
     if (video_count == 4) video_count = 0;
     
-    var testEl = document.createElement( "video" ),
-      mpeg4, h264, ogg, webm;
-
-    if ( testEl.canPlayType ) {
-    mpeg4 = "" !== testEl.canPlayType( 'video/mp4; codecs="mp4v.20.8"' );
-    h264 = "" !== ( testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E"' )
-        || testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ) );
-    ogg = "" !== testEl.canPlayType( 'video/ogg; codecs="theora"' );
-    webm = "" !== testEl.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
+ //   var testEl = document.createElement( "video" ),
+ //     mpeg4, h264, ogg, webm;
+ //   if ( testEl.canPlayType ) {
+ //   mpeg4 = "" !== testEl.canPlayType( 'video/mp4; codecs="mp4v.20.8"' );
+ //   h264 = "" !== ( testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E"' )
+ //       || testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ) );
+ //   ogg = "" !== testEl.canPlayType( 'video/ogg; codecs="theora"' );
+ //   webm = "" !== testEl.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
     
-    }
+ //   }
     var nextVideo = "vid/mm"+video_count+".mp4";
-    if(mpeg4 == true) nextVideo = "vid/mm"+video_count+".mp4";
-    if(h264 == true) nextVideo = "vid/mm"+video_count+".mp4";
-    if(ogg == true) nextVideo = "vid/mm"+video_count+".ogg";
+ //   if(mpeg4 == true) nextVideo = "vid/mm"+video_count+".mp4";
+ //   if(h264 == true) nextVideo = "vid/mm"+video_count+".mp4";
+ //   if(ogg == true) nextVideo = "vid/mm"+video_count+".ogg";
         
     videoPlayer.src = nextVideo;
     videoPlayer.play();
