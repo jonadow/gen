@@ -6,7 +6,9 @@
 <link rel="stylesheet" href='/css/style.css'>
 
 <video id="homevideo" width="100%" autoplay onended="run()">
-    <source src="vid/mm0.mp4" type='video/mp4'/>
+    <source src="vid/mm0.mp4" type='video/mp4'>
+    <source src="vid/mm0.ogg" type="video/ogg">
+     
 </video>
 
 <div id="polina">
@@ -57,6 +59,7 @@ function myFunction() {
     
     var testEl = document.createElement( "video" ),
       mpeg4, h264, ogg, webm;
+
     if ( testEl.canPlayType ) {
     mpeg4 = "" !== testEl.canPlayType( 'video/mp4; codecs="mp4v.20.8"' );
     h264 = "" !== ( testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E"' )
