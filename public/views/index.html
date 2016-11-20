@@ -44,9 +44,26 @@ videoPlayer = document.getElementById("homevideo");
 
 
 function run(){
-        video_count++;
-        if (video_count == 4) video_count = 0;
-        var nextVideo = "vid/mm"+video_count+".mp4";
+    video_count++;
+    if (video_count == 4) video_count = 0;
+
+    var testEl = document.createElement( "video" ),
+      mpeg4, h264, ogg, webm;
+
+    if ( testEl.canPlayType ) {
+    mpeg4 = "" !== testEl.canPlayType( 'video/mp4; codecs="mp4v.20.8"' );
+    h264 = "" !== ( testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E"' )
+        || testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ) );
+    ogg = "" !== testEl.canPlayType( 'video/ogg; codecs="theora"' );
+    webm = "" !== testEl.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
+    
+    }
+    var nextVideo = "vid/mm"+video_count+".mp4";
+    if(mpeg4 == true) nextVideo = "vid/mm"+video_count+".mp4";
+    if(h264 == true) nextVideo = "vid/mm"+video_count+".mp4";
+    if(ogg == true) nextVideo = "vid/mm"+video_count+".ogg";
+
+//        var nextVideo = "vid/mm"+video_count+".mp4";
         videoPlayer.src = nextVideo;
         videoPlayer.play();
    };
