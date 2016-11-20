@@ -32,7 +32,7 @@
 <form method="post" action="/">
   <button>Gallery</button>
 </form>
-<button onclick="myFunction()">cycle</button>
+<button onclick="myFunction()">Cycle</button>
 <p id="demo"></p>
 
 <script type="text/javascript">
@@ -44,7 +44,22 @@ videoPlayer = document.getElementById("homevideo");
 function run(){
         video_count++;
         if (video_count == 4) video_count = 0;
-        var nextVideo = "vid/mm"+video_count+".mp4";
+        var testEl = document.createElement( "video" ),
+            mpeg4, h264, ogg, webm;
+        if ( testEl.canPlayType ) {
+   
+        mpeg4 = "" !== testEl.canPlayType( 'video/mp4; codecs="mp4v.20.8"' );
+        h264 = "" !== ( testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E"' )
+         || testEl.canPlayType( 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ) );
+        ogg = "" !== testEl.canPlayType( 'video/ogg; codecs="theora"' );
+        webm = "" !== testEl.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
+    }
+    if(mpeg4 == true) var nextVideo = "vid/mm"+video_count+".mp4";
+    else if(h264 == true) var nextVideo = "vid/mm"+video_count+".mp4";
+    else if(ogg == true) var nextVideo = "vid/mm"+video_count+".ogg";
+    else if(webm == true) var nextVideo = "vid/mm"+video_count+".webm";
+        
+        //var nextVideo = "vid/mm"+video_count+".mp4";
         videoPlayer.src = nextVideo;
         videoPlayer.play();
    };
