@@ -7,6 +7,8 @@
 
 <video id="homevideo" width="100%" autoplay onended="run()">
     <source src="vid/mm0.mp4" type='video/mp4'/>
+    <source src="vid/mm0.ogv" type='video/ogg'/>
+    <source src="vid/mm0.webm" type='video/webm'/>
 </video>
 
 <div id="polina">
@@ -19,7 +21,7 @@
 -->
 <button onclick="window.location.href='index.html'">Home</button>
 <button onclick="window.location.href='about.html'">About</button>
-
+<button onclick="window.location.href='contact.html'">Contact</button>
 
 <p>
    Chris Dow graduated from Carleton University in 1993 with a bachelor's degree in engineering and went on to study at the Ontario College of Art where he spent 1995/96 in Florence and graduated in 1997.
@@ -34,9 +36,11 @@
 
 <form method="post" action="/">
   <button>Gallery</button>
+  <button type ="button" onclick="myFunction()">Cycle</button>
 </form>
-<button onclick="myFunction()">cycle</button>
-<p id="demo"></p>
+
+<!--<button onclick="myFunction()">cycle</button>
+<p id="demo"></p> -->
 
 <script type="text/javascript">
 

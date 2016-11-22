@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/jquery.form.js"></script>
+
+<link rel="stylesheet" href='/css/style.css'>
+
+
+</head>
+<body>
+<video id="homevideo" width="100%" autoplay onended="run()">
+    <source src="vid/mm0.mp4" type='video/mp4'/>
+    <source src="vid/mm0.ogv" type='video/ogg'/>
+    <source src="vid/mm0.webm" type='video/webm'/>
+</video>
+
+<div id="polina">
+<h1>Chris Dow</h1>
+<p>Generative Work</p>
+
+<!--
+<button onclick="myFunction0()">About</button>
+<p id="demo0"></p> 
+-->
+
+
+<button onclick="window.location.href='index.html'">Home</button>
+<button onclick="window.location.href='about.html'">About</button>
+<button onclick="window.location.href='contact.html'">Contact</button>
+
+<form method="post" action="/">
+  <button>Gallery</button>
+  <button type ="button" onclick="myFunction()">Cycle</button>
+</form>
+
+<!--<p id="demo"></p>-->
+
+<div id="form-main">
+  <div id="form-div">
+    <form class="form" id="form1">
+      
+      
+      <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+      </p>
+      
+      
+      <div class="submit">
+        <button type="submit" value="SEND">Send</button>
+        <div class="ease"></div>
+      </div>
+    </form>
+  </div>
+ 
+  
+
+
+<script type="text/javascript">
+
+video_count = 0;
+videoPlayer = document.getElementById("homevideo");
+
+
+function run(){
+        video_count++;
+        if (video_count == 4) video_count = 0;
+        var nextVideo = "vid/mm"+video_count+".mp4";
+        videoPlayer.src = nextVideo;
+        videoPlayer.play();
+   };
+
+
+function myFunction() {
+    //console.log( "skip video"));
+    //console.log(path.join(__dirname, "public/views"));
+
+        video_count++;
+        if (video_count == 4) video_count = 0;
+        var nextVideo = "vid/mm"+video_count+".mp4";
+        videoPlayer.src = nextVideo;
+        videoPlayer.play();
+}
+
+
+</script>
+<script src="js/modernizr-min.js"></script>
+<script>
+if (!Modernizr.input.placeholder){
+      $('input[placeholder], textarea[placeholder]').placeholder();
+}
+</script>
+
+
+</body>
+</html>
