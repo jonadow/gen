@@ -52,7 +52,7 @@ videoPlayer = document.getElementById("homevideo");
 
 function run(){
         video_count++;
-        if (video_count == 4) video_count = 0;
+        if (video_count == 5) video_count = 0;
         var nextVideo = "vid/mm"+video_count+".mp4";
         videoPlayer.src = nextVideo;
         videoPlayer.play();
@@ -64,7 +64,7 @@ function myFunction() {
     //console.log(path.join(__dirname, "public/views"));
 
         video_count++;
-        if (video_count == 4) video_count = 0;
+        if (video_count == 5) video_count = 0;
         var nextVideo = "vid/mm"+video_count+".mp4";
         videoPlayer.src = nextVideo;
         videoPlayer.play();
