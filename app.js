@@ -13,34 +13,45 @@ function validate(contact){
   if (message.length == 0) {
     alert ("You must enter a message.");
     return false;
-  }mj
-
+  }
   return true;
 }
 
 
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-//app.set('port', process.env.PORT || 3000);
+
 
 app.set('view engine', 'jade');
-//app.set('views', __dirname + '/public/views');
-//app.set('css', __dirname + '/public/css');
 app.use(express.static(__dirname + '/public/views/'));
 
- //var router = express.Router();
-// app.use(router);
+ var router = express.Router();
+ app.use(router);
 
- //router.use(function(req, res, next) {
+
+ router.use(function(req, res, next) {
 //	 log each request to the console
- //  console.log(req.baseUrl);
-//	 console.log(req.method, req.url,req.app);
- //  console.log("kkkkkkkkkk");
-   
-//	 continue doing what we were doing and go to the route
-//	next();	
-//});
+  console.log(req.baseUrl);
+ 	console.log(req.method, req.url,req.app);
 
+	next();	
+ });
+
+    // Get the form.
+var form = $('#ajax-contact');
+var formMessages = $('#form-messages');
+
+
+$(form).submit(function(event) {
+    // Stop the browser from submitting the form.
+    event.preventDefault();
+
+    // TODO
+});
+
+
+/*
 $(function() {
 
 	// Get the form.
@@ -97,6 +108,7 @@ $(function() {
 
 });
 
+*/
 
 
 
@@ -112,18 +124,6 @@ app.get('/', function(req,res){
 res.sendFile('index.html', { root: path.join(__dirname, '/public/views/') });
 });
 
-
-
-
-    // TODO: The rest of the code will go here...
-
-// Set up an event listener for the contact form.
-//$(form).submit(function(event) {
-    // Stop the browser from submitting the form.
-//    event.preventDefault();
-
-    // TODO
-//});
 
 
 console.log(path.join(__dirname, '/public/views/gallery0'));
